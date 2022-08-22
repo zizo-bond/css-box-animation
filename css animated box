@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color:#1d2b3a;
+}
+.input{
+    position: relative;
+    width: 250px;
+}
+.input input{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255,0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color : white;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.input span{
+    position: absolute;
+    padding: 10px;
+    left:0;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255,0.25);
+    text-transform: uppercase;
+    transition: 0.5 s;
+}
+.input input:valid ~span ,
+.input input:focus ~span
+{
+    color:#00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4 ;
+    border-right:1px solid #00dfc4 ; 
+    letter-spacing: 0.2em;
+}
+.input input:valid  ,
+.input input:focus {
+    border:#00dfc4 1px solid;
+}
+.input:nth-child(2) input:valid ~span ,
+.input:nth-child(2) input:focus ~span{
+    background-color:#00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+}
+
+</style>
+
+<body>
+<div class="input">
+<input type="text" required="requird">
+<span>First name</span>
+</div>
+<div class="input">
+    <input type="text" required="requird">
+    <span>Last name</span>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
